@@ -6,7 +6,9 @@ public class Incidencia {
     private String solucion;
     private boolean resuelta;
 
-    // Constructor
+    public Incidencia() {
+    }
+
     public Incidencia(int puesto, String descripcion) {
         this.puesto = puesto;
         this.descripcion = descripcion;
@@ -15,7 +17,57 @@ public class Incidencia {
         this.solucion = "";
     }
 
-    public static String getPendientes() {
+    public static int getNumIncidencias() {
+        return numIncidencias;
+    }
+
+    public static void setNumIncidencias(int numIncidencias) {
+        Incidencia.numIncidencias = numIncidencias;
+    }
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public void setCodigo(int codigo) {
+        this.codigo = codigo;
+    }
+
+    public int getPuesto() {
+        return puesto;
+    }
+
+    public void setPuesto(int puesto) {
+        this.puesto = puesto;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getSolucion() {
+        return solucion;
+    }
+
+    public void setSolucion(String solucion) {
+        this.solucion = solucion;
+    }
+
+    public boolean isResuelta() {
+        return resuelta;
+    }
+
+    public void setResuelta(boolean resuelta) {
+        this.resuelta = resuelta;
+    }
+
+    //Metodo para incidencias pendientes
+    public static int getPendientes() {
+        return numIncidencias;
     }
 
     // Método para resolver una incidencia
